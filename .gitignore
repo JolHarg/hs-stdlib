@@ -1,0 +1,13 @@
+.stack-work
+dist
+dist-newstyle
+.ghc.*
+*.hi
+*.o
+.env
+report
+result*
+.direnv
+.hie
+stan.html
+hie.yaml
