@@ -19,7 +19,6 @@ common shared-properties
 
 library
   import: shared-properties
-  main-is:             build-hs-stdlib.hs
   build-depends:
       base >= 4.7 && < 5
   other-modules:
