@@ -6,5 +6,5 @@ module Lib.Seq where
 a >>>= f = a >>= (\b -> f b >> pure b)
 
 -- unique?
-(>>>) :: Monad m => m b -> m a -> m b
+(>>>) ∷ Monad m ⇒ m b → m a -> m b
 a >>> f = a >> (f >> a)

@@ -1,7 +1,8 @@
+{-# LANGUAGE UnicodeSyntax #-}
 -- extra Data.Tuple.Extra Extra dupe
 -- utility-ht Data.Tuple.HT double
 -- relude Relude.Extra.Tuple dup
-dup :: a -> (a, a)
+dup ∷ a → (a, a)
 dup x = (x, x)
 
 -- like Graphics.Gnuplot.Plot.ThreeDimensional.functionToGraph

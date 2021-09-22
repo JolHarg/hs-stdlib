@@ -1,3 +1,4 @@
+{-# LANGUAGE UnicodeSyntax #-}
 
 firefoxConfig ∷ WDConfig
 firefoxConfig = defaultConfig {-{

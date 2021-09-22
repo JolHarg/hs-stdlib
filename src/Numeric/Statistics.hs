@@ -1,3 +1,4 @@
+{-# LANGUAGE UnicodeSyntax #-}
 
 -- combinator
 countFreq ∷ (Traversable t, Num n, Ord a) ⇒ t a → M.Map a n

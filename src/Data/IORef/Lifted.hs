@@ -1,3 +1,4 @@
+{-# LANGUAGE UnicodeSyntax #-}
 -- unliftio UnliftIO.IORef
 -- relude Relude.Lifted.IORef
 -- stack Stack.Prelude

@@ -1,24 +1,25 @@
+{-# LANGUAGE UnicodeSyntax #-}
 
 -- extra: Data.List.Extra
-(!?) :: [a] -> Int -> Maybe a
+(!?) ∷ [a] → Int -> Maybe a
 xs !? i = if length xs > i then Just (xs !! i) else Nothing
 
 -- Stolen from utility-ht
-inRange :: Ord a => (a, a) -> a -> Bool
+inRange ∷ Ord a ⇒ (a, a) → a -> Bool
 inRange (from, to) = apply2way (&&) (>= from) (<= to)
 
 -- todo replace with calls to ilist?
-replaceListElement :: Int -> a -> [a] -> [a]
+replaceListElement ∷ Int → a -> [a] -> [a]
 replaceListElement n x xs = take n xs <> ([x] <> drop (n + 1) xs)
 
 -- similar to utility-ht's nest, or applyN, nTimes, etc
-iter :: Int -> (a -> a) -> a -> a
+iter ∷ Int → (a -> a) -> a -> a
 iter 0 _ x = x
 iter 1 f x = f x
 iter i f x = iter (i - 1) f x
 
 -- utility-ht's Control.Monad.HT's nest
-iterA :: Applicative f => Int -> (a -> f a) -> a -> f a
+iterA ∷ Applicative f ⇒ Int → (a -> f a) -> a -> f a
 iterA 0 _ x = pure x
 iterA 1 f x = f x
 iterA i f x = iterA (i - 1) f x
@@ -33,7 +34,7 @@ avg xs = fromIntegral (sum xs) / fromIntegral (length xs)
 -- e.g. [1,2,3] -> [(1, 2), (2, 3)]
 -}
 
-freq :: (Eq a, Ord a) => [a] -> Map a Integer
+freq ∷ (Eq a, Ord a) ⇒ [a] → Map a Integer
 freq xs = fromListWith (+) [(c, 1) | c <- xs]
 
 -- base-unicode-symbols Prelude.Unicode (∤)
@@ -96,7 +97,7 @@ number = read <$> many digit
 (%) ∷ ((String → a) → b) → ((String → c) → a) → (String → c) → b
 (%) = combineCont (++)
 
-waitSecs :: Int -> IO ()
+waitSecs ∷ Int → IO ()
 waitSecs x = threadDelay (x * 1000000)
 
 exitWith ∷ MonadIO m ⇒ (() → IO a) → m a

@@ -1,3 +1,4 @@
+{-# LANGUAGE UnicodeSyntax #-}
 -- listToPairs
 -- also known as pairs
 

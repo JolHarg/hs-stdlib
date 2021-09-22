@@ -1,4 +1,5 @@
-nl :: String
+{-# LANGUAGE UnicodeSyntax #-}
+nl ∷ String
 nl = "\n"
 
 -- Similar to:
