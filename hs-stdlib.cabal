@@ -21,7 +21,43 @@ library
   import: shared-properties
   build-depends:
       base >= 4.7 && < 5
-  other-modules:
+    , bifunctors
+    , containers
+    , extra
+    , hxt
+    , hxt-xpath
+    , MonadRandom
+    , process
+    , template-haskell
+    , text
+    , time
+    , webdriver
+  exposed-modules:
+      Data.Bifunctor.Both
+    , Data.IORef.Lifted
+    , Data.List.Nub
+    , Data.List.Pairs
+    , Data.List.Repeat
+    , Data.List.Unique
+    , Data.List.Zip
+    , Data.Map.Indexed
+    , Data.Map.Map
+    , Data.Map.Zip
+    , Data.Text.Show
+    , Data.Time.Constants
+    , Data.Time.Conversion
+    , Data.Time.Utils
+    , Data.String.Extra
+    , Language.Haskell.TH.Extra
+    , Numeric.Round
+    , Numeric.SafeDiv
+    , Numeric.Statistics
+    , System.Environment.Lifted
+    , System.Process.Lifted
+    , Test.WebDriver.Config.Browsers
+    , Text.XML.HXT.XPath.XPath
+    , StdPrelude
+    -- ToMove - move it!
 
 test-suite hs-stdlib-test
   import: shared-properties

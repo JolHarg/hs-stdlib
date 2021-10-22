@@ -1,4 +1,10 @@
 {-# LANGUAGE UnicodeSyntax #-}
+module Data.IORef.Lifted where
+
+import StdPrelude
+import Control.Monad.IO.Class
+import qualified Data.IORef as P
+
 -- unliftio UnliftIO.IORef
 -- relude Relude.Lifted.IORef
 -- stack Stack.Prelude

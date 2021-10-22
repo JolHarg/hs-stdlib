@@ -1,4 +1,6 @@
 {-# LANGUAGE UnicodeSyntax #-}
+module Data.List.Zip where
+
 -- extra Data.Tuple.Extra Extra dupe
 -- utility-ht Data.Tuple.HT double
 -- relude Relude.Extra.Tuple dup

@@ -1,5 +1,5 @@
 {-# LANGUAGE UnicodeSyntax #-}
-module Lib.SafeDiv (
+module Numeric.SafeDiv (
     safeDiv
 ) where
 

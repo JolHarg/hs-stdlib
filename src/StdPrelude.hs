@@ -1,7 +1,7 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE UnicodeSyntax     #-}
 
-module Lib.Prelude (
+module StdPrelude (
     toString,
     putStrLn,
     print,
@@ -9,7 +9,7 @@ module Lib.Prelude (
     printError,
     Eq(..),
     Show(..),
-    IO(..),
+    IO(),
     ($),
     (<>),
     (.),
@@ -25,18 +25,18 @@ module Lib.Prelude (
     const,
     (<$>),
     Maybe(..),
-    Bool(..)
+    Bool(..),
+    io
 ) where
 
 import           Control.Monad.IO.Class
-import qualified Data.IORef             as P
-import           Data.Map.Strict
 import           Data.String
-import           Prelude                (IO, MonadFail, Show, read, show, ($),
-                                         (.), (<$>)) hiding (error, getLine, print, putStrLn)
+import           Prelude                hiding (error, getLine, print, putStrLn)
 import qualified Prelude                as P (error, getLine, print, putStrLn)
-import qualified System.Environment     as P
-import           System.IO              hiding (error, getLine, print, putStrLn)
+import           System.IO              hiding (getLine, print, putStrLn)
+
+io ∷ (MonadIO m) ⇒ IO a → m a
+io = liftIO
 
 putStrLn ∷ (MonadIO m, IsString s, Show s) ⇒ s → m ()
 putStrLn = liftIO . P.putStrLn . toString

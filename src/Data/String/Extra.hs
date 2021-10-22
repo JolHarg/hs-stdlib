@@ -1,4 +1,8 @@
 {-# LANGUAGE UnicodeSyntax #-}
+module Data.String.Extra where
+
+import Data.String
+
 nl ∷ String
 nl = "\n"
 

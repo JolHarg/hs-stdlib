@@ -7,9 +7,10 @@ let
   myHaskellPackages = nixpkgs.pkgs.haskell.packages.${compiler}.override {
     overrides = self: super: rec {
       hs-stdlib = self.callCabal2nix "hs-stdlib" (gitignore ./.) {};
-      fsutils = self.callCabal2nix "fsutils" (builtins.fetchGit {
-        url = "https://github.com/danwdart/fsutils.git";
-        rev = "bd85f977a7499a936181a37f4c602bd8b4480d68";
+      # https://github.com/kallisti-dev/hs-webdriver/issues/177
+      webdriver = self.callCabal2nix "webdriver" (builtins.fetchGit {
+        url = "https://github.com/danwdart/hs-webdriver.git";
+        rev = "52a82be322cbb8ee8e65f87056827a3b89277e2a";
       }) {};
     };
   };
@@ -29,9 +30,7 @@ let
       haskellPackages.stan
       haskellPackages.stylish-haskell
       haskellPackages.weeder
-      openssh
       parallel
-      wget
     ];
     withHoogle = false;
   };

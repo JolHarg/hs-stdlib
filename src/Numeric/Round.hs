@@ -1,5 +1,5 @@
 {-# LANGUAGE UnicodeSyntax #-}
-module Funk.Round (roundNumbers) where
+module Numeric.Round (roundNumbers) where
 
 import           Data.List (sort)
 

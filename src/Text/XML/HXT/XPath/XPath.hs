@@ -1,7 +1,7 @@
 {-# LANGUAGE UnicodeSyntax #-}
 
 
-module Lib.XPath (processXPath) where
+module Text.XML.HXT.XPath.XPath (processXPath) where
 
 import           Data.Functor
 import           Data.Maybe
