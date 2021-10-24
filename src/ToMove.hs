@@ -2,25 +2,25 @@
 module ToMove where
 
 -- extra: Data.List.Extra
-(!?) ∷ [a] → Int -> Maybe a
+(!?) ∷ [a] → Int → Maybe a
 xs !? i = if length xs > i then Just (xs !! i) else Nothing
 
 -- Stolen from utility-ht
-inRange ∷ Ord a ⇒ (a, a) → a -> Bool
+inRange ∷ Ord a ⇒ (a, a) → a → Bool
 inRange (from, to) = apply2way (&&) (>= from) (<= to)
 
 -- todo replace with calls to ilist?
-replaceListElement ∷ Int → a -> [a] -> [a]
+replaceListElement ∷ Int → a → [a] -> [a]
 replaceListElement n x xs = take n xs <> ([x] <> drop (n + 1) xs)
 
 -- similar to utility-ht's nest, or applyN, nTimes, etc
-iter ∷ Int → (a -> a) -> a -> a
+iter ∷ Int → (a → a) -> a -> a
 iter 0 _ x = x
 iter 1 f x = f x
 iter i f x = iter (i - 1) f x
 
 -- utility-ht's Control.Monad.HT's nest
-iterA ∷ Applicative f ⇒ Int → (a -> f a) -> a -> f a
+iterA ∷ Applicative f ⇒ Int → (a → f a) -> a -> f a
 iterA 0 _ x = pure x
 iterA 1 f x = f x
 iterA i f x = iterA (i - 1) f x

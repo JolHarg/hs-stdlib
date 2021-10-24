@@ -4,8 +4,9 @@ module Data.Time.Utils where
 import           Control.Applicative      ((<|>))
 import           Data.Functor
 import           Data.Maybe               (fromJust)
-import           Data.Time                (UTCTime, ZonedTime, Day, toGregorian,
-                                           utctDay, zonedTimeToUTC, diffDays, getCurrentTime)
+import           Data.Time                (Day, UTCTime, ZonedTime, diffDays,
+                                           getCurrentTime, toGregorian, utctDay,
+                                           zonedTimeToUTC)
 import           Data.Time.Format.ISO8601 (iso8601ParseM)
 import           Data.Tuple.Extra
 

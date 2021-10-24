@@ -1,9 +1,9 @@
 {-# LANGUAGE UnicodeSyntax #-}
 module Data.IORef.Lifted where
 
-import StdPrelude
-import Control.Monad.IO.Class
-import qualified Data.IORef as P
+import           Control.Monad.IO.Class
+import qualified Data.IORef             as P
+import           StdPrelude
 
 -- unliftio UnliftIO.IORef
 -- relude Relude.Lifted.IORef

@@ -1,9 +1,9 @@
 {-# LANGUAGE UnicodeSyntax #-}
 module Data.Map.Zip where
 
-import StdPrelude
-import qualified Prelude as P
-import Data.Map (Map, fromList)
+import           Data.Map   (Map, fromList)
+import qualified Prelude    as P
+import           StdPrelude
 
 -- unique?
 zip ∷ P.Ord a ⇒ [a] → [b] → Map a b
