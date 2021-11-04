@@ -4,6 +4,7 @@
 } :
 let
   gitignore = nixpkgs.nix-gitignore.gitignoreSourcePure [ ./.gitignore ];
+  lib = nixpkgs.pkgs.haskell.lib;
   myHaskellPackages = nixpkgs.pkgs.haskell.packages.${compiler}.override {
     overrides = self: super: rec {
       hs-stdlib = self.callCabal2nix "hs-stdlib" (gitignore ./.) {};
@@ -20,21 +21,22 @@ let
     ];
     shellHook = ''
       gen-hie > hie.yaml
+      for i in $(find -type f); do krank $i; done
     '';
-    buildInputs = with nixpkgs; [
-      haskellPackages.apply-refact
-      haskellPackages.cabal-install
-      haskellPackages.ghcid
-      haskellPackages.hlint
-      haskellPackages.implicit-hie
-      haskellPackages.stan
-      haskellPackages.stylish-haskell
-      haskellPackages.weeder
-      parallel
+    buildInputs = with nixpkgs; with haskellPackages; [
+      apply-refact
+      cabal-install
+      ghcid
+      hlint
+      implicit-hie
+      krank
+      stan
+      stylish-haskell
+      weeder
     ];
     withHoogle = false;
   };
-  exe = nixpkgs.haskell.lib.justStaticExecutables (myHaskellPackages.hs-stdlib);
+  exe = lib.justStaticExecutables (myHaskellPackages.hs-stdlib);
 in
 {
   inherit shell;
