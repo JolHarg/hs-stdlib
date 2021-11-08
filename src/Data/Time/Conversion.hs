@@ -1,8 +1,9 @@
 {-# LANGUAGE UnicodeSyntax #-}
 module Data.Time.Conversion (daysToSeconds, yearsToSeconds) where
 
-import           Data.Time.Constants (secondsInDay, secondsInYear)
+import           Data.Time.Constants (secondsInYear)
+import           Number.SI.Unit (secondsPerDay)
 
 daysToSeconds, yearsToSeconds ∷ Double → Integer
-daysToSeconds d = round (d * fromInteger secondsInDay)
+daysToSeconds d = round (d * fromInteger secondsPerDay)
 yearsToSeconds d = round (d * fromInteger secondsInYear)

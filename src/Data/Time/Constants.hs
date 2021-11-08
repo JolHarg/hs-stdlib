@@ -1,6 +1,5 @@
 {-# LANGUAGE UnicodeSyntax #-}
-module Data.Time.Constants (secondsInDay, secondsInYear) where
+module Data.Time.Constants (secondsInYear) where
 
-secondsInDay, secondsInYear ∷ Integer
-secondsInDay = 86400
+secondsInYear ∷ Integer
 secondsInYear = 31536000
