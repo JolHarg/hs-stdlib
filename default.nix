@@ -29,6 +29,7 @@ let
       ghcid
       ghcide
       haskell-language-server
+      hasktags
       hlint
       implicit-hie
       krank
