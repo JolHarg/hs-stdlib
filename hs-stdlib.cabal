@@ -35,6 +35,7 @@ library
     , webdriver
   exposed-modules:
       Data.Bifunctor.Both
+    , Data.Function.Iteration
     , Data.IORef.Lifted
     , Data.List.Nub
     , Data.List.Pairs

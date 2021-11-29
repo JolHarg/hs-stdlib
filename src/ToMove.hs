@@ -13,18 +13,6 @@ inRange (from, to) = apply2way (&&) (>= from) (<= to)
 replaceListElement ∷ Int → a → [a] → [a]
 replaceListElement n x xs = take n xs <> ([x] <> drop (n + 1) xs)
 
--- similar to utility-ht's nest, or applyN, nTimes, etc
-iter ∷ Int → (a → a) → a -> a
-iter 0 _ x = x
-iter 1 f x = f x
-iter i f x = iter (i - 1) f x
-
--- utility-ht's Control.Monad.HT's nest
-iterA ∷ Applicative f ⇒ Int → (a → f a) → a -> f a
-iterA 0 _ x = pure x
-iterA 1 f x = f x
-iterA i f x = iterA (i - 1) f x
-
 
 avg ∷ [Int] → Double
 avg xs = fromIntegral (sum xs) / fromIntegral (length xs)
