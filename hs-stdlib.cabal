@@ -28,6 +28,7 @@ library
     , hxt
     , hxt-xpath
     , MonadRandom
+    , numeric-prelude
     , process
     , template-haskell
     , text
