@@ -1,4 +1,6 @@
 {-# LANGUAGE UnicodeSyntax #-}
+{-# OPTIONS_GHC -Wno-incomplete-record-updates #-}
+-- Above is for chrome {..} etc
 
 module Test.WebDriver.Config.Browsers where
 
