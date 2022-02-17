@@ -1,14 +1,14 @@
 {-# LANGUAGE UnicodeSyntax #-}
 -- composition Data.Composition (.:)
 -- util Util (∘∘)
-(.:) ∷ (c → d) → (a → b -> c) -> a -> b -> d
+(.:) ∷ (c → d) → (a → b → c) → a → b → d
 (.:) = (.) (.) (.)
 
 (...) ∷ (b → c) → (a1 → a2 → b) → a1 → a2 → c
 (...) = (.) . (.)
 
 -- yjtools Data.Function.Tools apply2way
-apply2way ∷ (a → b → c) → (d -> a) -> (d -> b) -> d -> c
+apply2way ∷ (a → b → c) → (d → a) → (d → b) → d → c
 apply2way f g h = uncurry f . (g &&& h)
 
 infixr 9 ...
