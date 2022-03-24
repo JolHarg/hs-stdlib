@@ -33,7 +33,7 @@ library
     , template-haskell
     , text
     , time
-    , webdriver
+    -- , webdriver
   exposed-modules:
       Data.Bifunctor.Both
     , Data.Function.Iteration
@@ -57,7 +57,7 @@ library
     , Numeric.Statistics
     , System.Environment.Lifted
     , System.Process.Lifted
-    , Test.WebDriver.Config.Browsers
+    -- , Test.WebDriver.Config.Browsers
     , Text.XML.HXT.XPath.XPath
     , StdPrelude
     -- ToMove - move it!
