@@ -32,7 +32,7 @@ notdiv x y = y `mod` x /= 0
 
 -- https://wiki.haskell.org/Random_shuffle
 
-instance {-# OVERLAPPABLE #-} (Bounded a, Enum a) => Random a where
+instance {-# OVERLAPPABLE #-} (Bounded a, Enum a) ⇒ Random a where
     random = randomR (minBound, maxBound)
     randomR (from, to) gen =
         let (rndInt, nxtGen) = randomR (fromEnum from, fromEnum to) gen
