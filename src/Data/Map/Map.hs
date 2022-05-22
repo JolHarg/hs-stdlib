@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Data.Map.Map (mapMap, mapMap2) where
 
 import           Data.Bifunctor

@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 
 
 module Text.XML.HXT.XPath.XPath (processXPath) where

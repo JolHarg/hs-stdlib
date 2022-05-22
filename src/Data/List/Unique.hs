@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Data.List.Unique where
 
 import qualified Data.Set as S

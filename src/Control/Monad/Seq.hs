@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Lib.Seq where
 
 -- liquid-fixpoint Language.Fixpoint.Misc (=>>)

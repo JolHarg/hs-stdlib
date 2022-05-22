@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Data.Time.Conversion (daysToSeconds, yearsToSeconds) where
 
 import           Data.Time.Constants (secondsInYear)

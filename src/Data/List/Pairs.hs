@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Data.List.Pairs where
 
 import           Data.Bifoldable

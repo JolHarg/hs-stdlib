@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 -- composition Data.Composition (.:)
 -- util Util (∘∘)
 (.:) ∷ (c → d) → (a → b → c) → a → b → d

@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Language.Haskell.TH.Extra where
 
 import           Language.Haskell.TH

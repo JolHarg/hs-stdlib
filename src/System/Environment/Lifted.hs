@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module System.Environment.Lifted where
 
 import           Control.Monad.IO.Class

@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Data.Bifunctor.Both where
 
 import           Data.Bifunctor

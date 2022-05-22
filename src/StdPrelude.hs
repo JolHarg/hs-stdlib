@@ -1,5 +1,4 @@
 {-# LANGUAGE NoImplicitPrelude #-}
-{-# LANGUAGE UnicodeSyntax     #-}
 
 module StdPrelude (
     toString,

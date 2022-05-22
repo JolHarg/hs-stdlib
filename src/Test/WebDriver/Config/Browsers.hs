@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 {-# OPTIONS_GHC -Wno-incomplete-record-updates #-}
 -- Above is for chrome {..} etc
 

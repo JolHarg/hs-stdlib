@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Numeric.Round (roundNumbers) where
 
 import           Data.List (sort)

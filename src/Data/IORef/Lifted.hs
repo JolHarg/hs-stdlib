@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Data.IORef.Lifted where
 
 import           Control.Monad.IO.Class

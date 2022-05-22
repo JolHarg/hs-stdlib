@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module ToMove where
 
 -- extra: Data.List.Extra

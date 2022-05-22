@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Numeric.Statistics where
 
 import           Control.Monad.Random

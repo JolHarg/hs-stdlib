@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Data.Map.Zip where
 
 import           Data.Map   (Map, fromList)

@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Data.List.Zip where
 
 -- extra Data.Tuple.Extra Extra dupe

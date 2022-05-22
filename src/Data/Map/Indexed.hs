@@ -1,4 +1,3 @@
-{-# LANGUAGE UnicodeSyntax #-}
 module Data.Map.Indexed where
 
 import           Data.Map as M
