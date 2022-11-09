@@ -4,7 +4,7 @@
     nixpkgs = nixpkgs;
     compiler = compiler;
   },
-  compiler ? "ghc942"
+  compiler ? "ghc94"
 } :
 let
   gitignore = nixpkgs.nix-gitignore.gitignoreSourcePure [ ./.gitignore ];
@@ -13,11 +13,6 @@ let
   myHaskellPackages = nixpkgs.pkgs.haskell.packages.${compiler}.override {
     overrides = self: super: rec {
       hs-stdlib = lib.dontHaddock (self.callCabal2nix "hs-stdlib" (gitignore ./.) {});
-      # https://github.com/kallisti-dev/hs-webdriver/issues/177
-      #webdriver = self.callCabal2nix "webdriver" (builtins.fetchGit {
-      #  url = "https://github.com/danwdart/hs-webdriver.git";
-      #  rev = "52a82be322cbb8ee8e65f87056827a3b89277e2a";
-      #}) {};
     };
   };
   shell = myHaskellPackages.shellFor {
