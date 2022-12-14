@@ -37,7 +37,7 @@ import           System.IO              hiding (getLine, print, putStrLn)
 io ∷ (MonadIO m) ⇒ IO a → m a
 io = liftIO
 
-putStrLn ∷ (MonadIO m, IsString s, Show s) ⇒ s → m ()
+putStrLn ∷ (MonadIO m, Show s) ⇒ s → m ()
 putStrLn = liftIO . P.putStrLn . toString
 
 -- protolude Protolude print
@@ -45,22 +45,22 @@ print ∷ (MonadIO m, Show s) ⇒ s → m ()
 print = liftIO . P.print
 
 -- basic-prelude BasicPrelude fromShow
-toString ∷ (IsString s, Show s) ⇒ s → String
+toString ∷ (Show s) ⇒ s → String
 toString = read . show
 
-getLine ∷ (MonadIO m, IsString s, Show s) ⇒ m s
+getLine ∷ (MonadIO m, IsString s) ⇒ m s
 getLine = liftIO $ fromString <$> P.getLine
 
-putStrLnError ∷ (MonadIO m, IsString s, Show s) ⇒ s → m ()
+putStrLnError ∷ (MonadIO m, Show s) ⇒ s → m ()
 putStrLnError = liftIO . hPutStrLn stderr . toString
 
 printError ∷ (MonadIO m, Show s) ⇒ s → m ()
 printError = liftIO . hPrint stderr
 
-sshow ∷ (Show s, Read s, IsString st, Read st) ⇒ s → st
+sshow ∷ (Show s, Read st) ⇒ s → st
 sshow = read . show
 
-error ∷ (IsString s, Show s) ⇒ s → a
+error ∷ (Show s) ⇒ s → a
 error = P.error . toString
 
 {-}
