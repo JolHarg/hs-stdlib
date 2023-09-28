@@ -1,8 +1,8 @@
 module Data.IORef.Lifted where
 
-import           Control.Monad.IO.Class
-import qualified Data.IORef             as P
-import           StdPrelude
+import Control.Monad.IO.Class
+import Data.IORef             qualified as P
+import StdPrelude
 
 -- unliftio UnliftIO.IORef
 -- relude Relude.Lifted.IORef

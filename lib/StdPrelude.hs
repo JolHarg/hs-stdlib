@@ -28,11 +28,11 @@ module StdPrelude (
     io
 ) where
 
-import           Control.Monad.IO.Class
-import           Data.String
-import           Prelude                hiding (error, getLine, print, putStrLn)
-import qualified Prelude                as P (error, getLine, print, putStrLn)
-import           System.IO              hiding (getLine, print, putStrLn)
+import Control.Monad.IO.Class
+import Data.String
+import Prelude                hiding (error, getLine, print, putStrLn)
+import Prelude                qualified as P (error, getLine, print, putStrLn)
+import System.IO              hiding (getLine, print, putStrLn)
 
 io ∷ (MonadIO m) ⇒ IO a → m a
 io = liftIO

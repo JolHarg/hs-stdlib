@@ -14,7 +14,7 @@ extra-source-files:  README.md
 common shared-properties
   hs-source-dirs:      lib
   default-language:    GHC2021
-  default-extensions:  DerivingStrategies, UnicodeSyntax
+  default-extensions:  DerivingStrategies, UnicodeSyntax, ImportQualifiedPost
   build-depends:       base >= 4.14.1.0 && < 5
   ghc-options:         -Wall -Werror -haddock -threaded -rtsopts -with-rtsopts=-N
                        -Weverything
@@ -24,14 +24,13 @@ common shared-properties
                        -Wno-implicit-prelude
                        -Wno-missing-safe-haskell-mode
                        -Wno-missing-kind-signatures
-                       -Wno-prepositive-qualified-module
                        -Wno-missing-local-signatures
   ghcjs-options:       -dedupe
 
 library
   import: shared-properties
   default-language:    GHC2021
-  default-extensions:  DerivingStrategies, UnicodeSyntax
+  default-extensions:  DerivingStrategies, UnicodeSyntax, ImportQualifiedPost
   build-depends:
       base >= 4.14.1.0 && < 5
     , containers
@@ -76,7 +75,7 @@ library
 test-suite hs-stdlib-test
   -- import: shared-properties
   default-language:    GHC2021
-  default-extensions:  DerivingStrategies, UnicodeSyntax
+  default-extensions:  DerivingStrategies, UnicodeSyntax, ImportQualifiedPost
   ghc-options:         -Wall -Werror -haddock -threaded -rtsopts -with-rtsopts=-N
                        -Weverything
                        -Wno-unsafe -Wno-safe
@@ -85,7 +84,6 @@ test-suite hs-stdlib-test
                        -Wno-implicit-prelude
                        -Wno-missing-safe-haskell-mode
                        -Wno-missing-kind-signatures
-                       -Wno-prepositive-qualified-module
                        -Wno-missing-local-signatures
   ghcjs-options:       -dedupe
   hs-source-dirs:      lib, test

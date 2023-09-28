@@ -2,14 +2,14 @@
 
 module Text.XML.HXT.XPath.XPath (processXPath) where
 
-import           Data.Functor
-import           Data.Maybe
-import           Data.Tree.Class
-import           Text.XML.HXT.Core        (IOStateArrow, XmlTree, XmlTrees, no,
-                                           readString, runX, withParseHTML,
-                                           withWarnings, yes)
-import           Text.XML.HXT.DOM.XmlNode
-import           Text.XML.HXT.XPath
+import Data.Functor
+import Data.Maybe
+import Data.Tree.Class
+import Text.XML.HXT.Core        (IOStateArrow, XmlTree, XmlTrees, no,
+                                 readString, runX, withParseHTML, withWarnings,
+                                 yes)
+import Text.XML.HXT.DOM.XmlNode
+import Text.XML.HXT.XPath
 
 -- getDocumentContents?
 xmlTree ∷ String → IOStateArrow s b XmlTree

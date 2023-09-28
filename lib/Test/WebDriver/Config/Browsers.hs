@@ -3,7 +3,7 @@
 
 module Test.WebDriver.Config.Browsers where
 
-import           Test.WebDriver
+import Test.WebDriver
 
 firefoxConfig ∷ WDConfig
 firefoxConfig = defaultConfig {-{

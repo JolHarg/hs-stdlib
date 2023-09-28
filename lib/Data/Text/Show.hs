@@ -1,6 +1,6 @@
 module Data.Text.Show where
 
-import           Data.Text
+import Data.Text
 
 -- http-api-data Web.HttpApiData Web.Internal.HttpApiData showTextData
 -- http-api-data Web.Internal.HttpApiData showt

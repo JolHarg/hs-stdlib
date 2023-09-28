@@ -1,8 +1,8 @@
 module Numeric.Statistics where
 
-import           Control.Monad.Random
-import           Data.Bifunctor
-import qualified Data.Map             as M
+import Control.Monad.Random
+import Data.Bifunctor
+import Data.Map             qualified as M
 
 -- combinator
 countFreq ∷ (Traversable t, Num n, Ord a) ⇒ t a → M.Map a n

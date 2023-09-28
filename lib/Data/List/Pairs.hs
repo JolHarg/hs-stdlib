@@ -1,7 +1,7 @@
 module Data.List.Pairs where
 
-import           Data.Bifoldable
-import           Data.List.Unique
+import Data.Bifoldable
+import Data.List.Unique
 
 -- listToPairs
 -- also known as pairs

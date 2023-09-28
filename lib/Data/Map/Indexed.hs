@@ -1,6 +1,6 @@
 module Data.Map.Indexed where
 
-import           Data.Map as M
+import Data.Map as M
 
 -- Used to be called listToMap
 -- Unique?

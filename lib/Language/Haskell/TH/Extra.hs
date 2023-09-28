@@ -1,7 +1,7 @@
 module Language.Haskell.TH.Extra where
 
-import           Language.Haskell.TH
-import           Language.Haskell.TH.Syntax
+import Language.Haskell.TH
+import Language.Haskell.TH.Syntax
 
 infoToExp ∷ Info → ExpQ
 infoToExp (VarI _ t _)     = stringE . show $ t

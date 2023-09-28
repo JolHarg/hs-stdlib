@@ -1,7 +1,7 @@
 module Data.Map.Map (mapMap, mapMap2) where
 
-import           Data.Bifunctor
-import           Data.Map
+import Data.Bifunctor
+import Data.Map
 
 -- unique?
 mapMap ∷ Ord k2 ⇒ ((k1, a1) → (k2, a2)) → Map k1 a1 → Map k2 a2
