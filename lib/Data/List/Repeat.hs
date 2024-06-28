@@ -1,3 +1,5 @@
+{-# OPTIONS_GHC -Wno-x-partial -Wno-unrecognised-warning-flags #-}
+
 module Data.List.Repeat (takeUntilRepeat) where
 
 takeUntilRepeat ∷ Eq a ⇒ [a] → [a]
