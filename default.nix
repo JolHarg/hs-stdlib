@@ -26,8 +26,7 @@ let
     buildInputs = tools.defaultBuildTools;
     withHoogle = false;
   };
-  exe = lib.justStaticExecutables (myHaskellPackages.hs-stdlib);
-in
+  in
 {
   inherit shell;
   hs-stdlib = lib.justStaticExecutables (myHaskellPackages.hs-stdlib);
