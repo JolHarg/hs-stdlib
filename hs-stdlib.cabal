@@ -90,6 +90,7 @@ test-suite hs-stdlib-test
     DerivingStrategies
     ImportQualifiedPost
     UnicodeSyntax
+
   ghc-options:
     -Wall -Werror -haddock -threaded -rtsopts -with-rtsopts=-N
     -Weverything -Wno-unsafe -Wno-safe -Wno-missing-import-lists
@@ -98,12 +99,14 @@ test-suite hs-stdlib-test
     -Wno-missing-poly-kind-signatures -Wno-missing-local-signatures
     -Wno-all-missed-specialisations -Wno-missed-specialisations
     -Wno-missing-role-annotations -Wno-unrecognised-warning-flags
+
   ghcjs-options:      -dedupe
   hs-source-dirs:     lib test
   type:               exitcode-stdio-1.0
   main-is:            Spec.hs
   build-depends:      hspec
--- , hspec-core
--- , hspec-expectations
--- , QuickCheck
+
+  -- , hspec-core
+  -- , hspec-expectations
+  -- , QuickCheck
   build-tool-depends: hspec-discover:hspec-discover
