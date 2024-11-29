@@ -40,7 +40,6 @@ io = liftIO
 putStrLn ∷ (MonadIO m, Show s) ⇒ s → m ()
 putStrLn = liftIO . P.putStrLn . toString
 
--- protolude Protolude print
 print ∷ (MonadIO m, Show s) ⇒ s → m ()
 print = liftIO . P.print
 
